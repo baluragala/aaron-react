@@ -9,6 +9,7 @@ import Products from "./Products";
 import About from "./About";
 import ProductDetail from "./ProductDetail";
 import NotFound from "./NotFound";
+import Counter from "./Counter";
 
 class App extends Component {
 
@@ -66,6 +67,7 @@ class App extends Component {
                 <Route path="/products/:pid" component={ProductDetail}/>
                 <Route path="/products" render={props => this.state.isLoggedIn ? <Products {...props}/> : <Redirect to="/home"/>}/>
                 <Route exact path="/about" component={About}/>
+                <Route exact path="/counter" component={Counter}/>
                 <Route component={NotFound}/>
             </Switch>
 
